@@ -1,0 +1,66 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block title %}Sign up{% endblock %}
+{% block stylesheet %}
+  <link rel="stylesheet" href="{%static 'css/account.css' %}">
+
+{% endblock %}
+
+{% block body %}
+<div class="container">
+  <div class="text-center logo my-4">
+    <h1>Cornershop</h1>
+    <h2>By Uber</h2>
+  </div>
+  
+    <div class="row justify-content-center">
+      <div class="col-lg-4 col-md-6 col-sm-8">
+            <form method="post">
+                {% csrf_token %}
+              <div class="input-group mb-3">
+              <label for="basic-url">Username</label>
+              {{form.username}}
+              </div>
+              <div class="input-group mb-2">
+              <label for="basic-url">First Name</label>
+              {{form.first_name}}
+              </div>
+              <div class="input-group mb-2">
+              <label for="basic-url">Last Name</label>
+              {{form.last_name}}
+              </div>
+              <div class="input-group mb-2">
+              <label for="basic-url">Email</label>
+              {{form.email}}
+              </div>
+              <div class="input-group mb-2">
+              <label for="basic-url">Password</label>
+              {{form.password1}}
+              </div>
+              <div class="input-group mb-2">
+                <label for="basic-url">Password Confirmation</label>
+                {{form.password2}}
+                </div>
+              <button type="submit" class="btn btn-danger">Create an account</button>
+            </form>
+          
+            <div class="text-muted text-center">
+              Already have an account? <a href="{% url 'login'%}">Log in</a>
+            </div>
+           
+      </div> 
+      <span class="vertical-line"></span>
+      <div class="col-lg-4 col-md-6 col-sm-4">
+        <ol class="nav navbar">
+        <li><a href="{% url 'social:begin' 'facebook' %}" class="fa fa-facebook"></a></li>
+        <li></li><a href="#" class="fa fa-google"></a></li>
+        <li></li><a href="#" class="fa fa-uber">Uber</a></li>
+        <li></li><a href="#" class="fa fa-apple"></a></li>
+      
+      <small><br>You can open a Cornershop account using your Apple, Google or Facebook account. If you already have an account, you will be logged in automatically</small>
+    </ol>  
+    </div>
+
+    </div>
+  </div>
+{% endblock %}

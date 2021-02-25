@@ -1,0 +1,58 @@
+
+body {
+    background-color:#fbfbfb;
+    font-size: 12px;
+  }
+  
+  
+  .logo a {
+    color: rgba(0,0,0,.9);
+  }
+  
+  .logo a:hover,
+  .logo a:active {
+    text-decoration: none;
+  }
+
+  .fa {
+    padding: 5px;
+    font-size: 30px;
+    width: 200px;
+    text-align: center;
+    text-decoration: none;
+    margin: 5px 5px;
+    border-radius: 5px;
+  }
+  
+  .fa:hover {
+      opacity: 0.7;
+  }
+  
+  .fa-facebook {
+    background: #3B5998;
+    color: white;
+  }
+
+  .fa-google {
+    background: #dd4b39;
+    color: white;
+  }
+
+  .fa-uber {
+    background: #131313;
+    color: white;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  }
+
+  
+  .fa-apple {
+    background: #131313;
+    color: white;
+  }
+  
+  .vertical-line{
+    display: inline-block;
+    border-left: 1px solid #ccc;
+    margin: 0 20px;
+    height: 200px;
+}
